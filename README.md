@@ -21,3 +21,7 @@ an experiment with activity pub and php
 - notifications via email?
 - images support
   
+### TO TEST:
+
+Make sure you update `db_connection.php` with your own database information.
+Also use the SQL file for the tables.
