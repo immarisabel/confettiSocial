@@ -24,4 +24,4 @@ an experiment with activity pub and php
 ### TO TEST:
 
 Make sure you update `db_connection.php` with your own database information.
-Also use the SQL file for the tables.
+Also use `tables.sql` file for the tables.
