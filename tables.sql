@@ -6,7 +6,6 @@ CREATE TABLE users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-
 CREATE TABLE posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT,
@@ -15,19 +14,12 @@ CREATE TABLE posts (
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-
-CREATE TABLE followers (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    follower_id INT,
-    following_id INT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (follower_id) REFERENCES users(id),
-    FOREIGN KEY (following_id) REFERENCES users(id)
-);
-
-CREATE TABLE uploaded_images (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    filename VARCHAR(255) NOT NULL,
-    image_data MEDIUMBLOB NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE gallery (
+    user_id INT,
+    idGallery INT AUTO_INCREMENT PRIMARY KEY,
+    titleGallery VARCHAR(100),
+    descGallery TEXT,
+    imgFullNameGallery VARCHAR(255),
+    orderGallery INT,
+    dateGallery TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
