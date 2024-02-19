@@ -37,3 +37,5 @@ an experiment with activity pub and php
     --header-fonts: "Lora", serif;
 ...
 ```
+
+- To use the registration form, just rename it to .php, but I sugest you also put it back to temp if not using. At least until I figure out a configuration file to turn it on and off.
