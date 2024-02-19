@@ -7,7 +7,7 @@
 </head>
 <body>
     <h2>User Registration</h2>
-    <form action="register.php" method="post">
+    <form action="backend/register.php" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required><br><br>
 

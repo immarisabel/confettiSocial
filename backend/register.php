@@ -17,6 +17,7 @@ $stmt->bind_param("sss", $username, $email, $hashed_password);
 
 if ($stmt->execute()) {
     echo "Registration successful!";
+    header("Location: ../index.php");
 } else {
     echo "Error: " . $conn->error;
 }

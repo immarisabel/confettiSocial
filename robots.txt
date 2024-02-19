@@ -1,0 +1,8 @@
+# Deny ALL crawlers, you can modify this if you want some exposure for some sites
+
+# TO ALLOW SOME USE THIS FORMAT:
+# User-agent: GoodBot
+# Disallow:
+
+User-agent: *
+Disallow: /

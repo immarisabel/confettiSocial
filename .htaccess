@@ -1,0 +1,5 @@
+# DENY DIRECT DATABASE CONFIG FILE ACCESS
+<Files "db_connection.php">
+    Order Deny,Allow
+    Deny from all
+</Files>

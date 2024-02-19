@@ -3,8 +3,16 @@
 require_once 'db_connection.php';
 
 // Check if the user is logged in (you can implement session management for this)
-// For demonstration purposes, assuming user ID 1 represents the logged-in user
-$user_id = 1;
+// For demonstration purposes, assuming session management sets the user ID
+// Get the user ID of the logged-in user from your session management system
+session_start(); // Start the session
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+} else {
+    // Handle case when user is not logged in
+    echo "Error: User is not logged in";
+    exit; // Stop execution
+}
 
 // Get form data
 $content = $_POST['content'];
@@ -16,6 +24,7 @@ $stmt->bind_param("is", $user_id, $content);
 
 if ($stmt->execute()) {
     echo "Post created successfully!";
+ 	header("Location: ../index.php");
 } else {
     echo "Error: " . $conn->error;
 }
@@ -23,4 +32,5 @@ if ($stmt->execute()) {
 // Close the database connection
 $stmt->close();
 $conn->close();
+
 ?>

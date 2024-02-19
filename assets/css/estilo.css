@@ -1,0 +1,237 @@
+:root {
+    --dark: #222222;
+    --light: #ffffff;
+    --primary: #ff018d;
+    --secondary: #ed65ff;
+    --body-fonts: "Lora", serif;
+    --header-fonts: "Lora", serif;
+
+    /* DEFAULT LIGHT */
+    --background: var(--background-light);
+    --header: var(--header-light);
+    --text: var(--text-light);
+    --accent: var(--accent-light);
+
+    /* Light Mode */
+    [data-theme="light"] {
+        --background: var(--background-light);
+        --header: var(--header-light);
+        --text: var(--text-light);
+        --accent: var(--accent-light);
+    }
+
+    /* Dark Mode */
+    [data-theme="dark"] {
+        --background: var(--background-dark);
+        --header: var(--header-dark);
+        --text: var(--text-dark);
+        --accent: var(--accent-dark);
+    }
+
+    --accent-light: var(--primary);
+    --accent-dark: var(--secondary);
+
+    --text-light: var(--dark);
+    --text-dark: var(--light);
+
+    --background-light: #ffffff;
+    --background-dark: #222222;
+
+    --header-light: var(--primary);
+    --header-dark: white;
+}
+
+body {
+    font-family: var(--body-fonts);
+    text-align: justify;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 2;
+    letter-spacing: 2px;
+    padding: 1rem;
+    background-color: var(--background);
+    color: var(--text) !important;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--accent);
+    margin: 20px 0;
+}
+
+h1 {
+    font-family: var(--header-fonts);
+    letter-spacing: 1rem;
+}
+
+footer {
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.container a,
+label {
+    color: var(--accent);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--text);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: var(--accent);
+    color: var(--background);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--text);
+}
+
+.richText-btn {
+    color: var(--text) !important;
+    background-color: var(--background);
+    border: 0;
+}
+
+.richText .richText-toolbar ul li a {
+    border: 0 !important;
+}
+
+label {
+    font-weight: bold;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+  .toggle_btn {
+    position: relative;
+    top: 14px;
+    background: var(--accent);
+    height: 1rem;
+    width: 2rem;
+    border-radius: 50px;
+}
+
+.circle {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    height: .8rem;
+    width: .8rem;
+    transition: .5s;
+    background: var(--background);
+    border-radius: 50%;
+}
+
+.change {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: .8rem;
+    width: .8rem;
+    transition: .5s;
+    background: var(--background);
+    border-radius: 50%;
+}
+
+.dark {
+    position: relative;
+    top: 14px;
+    background: var(--accent);
+    height: 1rem;
+    width: 2rem;
+    border-radius: 50px;
+}
+
+.date-selection-container {
+    margin-bottom: 1rem; 
+    background-color: var(--accent); 
+    padding: 10px;
+    border-radius: 5px;
+	color:var(--text);
+}
+
+.date-selection-container label,
+.date-selection-container input
+{
+	color:var(--text);
+	margin-right:1rem;
+}
+
+.date-selection-container input[type="date"] {
+    padding: .5rem;
+    border: 0;
+    border-radius: 5px;
+    font-size: 1rem;
+	color: var(--background);
+	background-color:var(--text);
+}
+
+button.material-icons {
+    background: none;
+    border: none;
+    font-family: 'Material Icons';
+    font-size: 2rem; 
+    cursor: pointer;
+    color: var(--text);
+    vertical-align:middle;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-family: var(--body-fonts);
+        text-align: justify;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 2;
+        letter-spacing: 2px;
+        padding: 1rem;
+        background-color: var(--background);
+        color: var(--text-color);
+    }
+
+    .container {
+        padding: 0rem !important;
+    }
+
+    h1 {
+        letter-spacing: 0;
+    }
+}

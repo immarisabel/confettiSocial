@@ -26,7 +26,7 @@ if ($result->num_rows == 1) {
         $_SESSION['username'] = $user['username'];
 
         // Redirect to index page
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit;
     } else {
         // Incorrect password

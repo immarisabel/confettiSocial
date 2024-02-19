@@ -9,6 +9,6 @@ $_SESSION = [];
 session_destroy();
 
 // Redirect to login page or any other page after logout
-header("Location: login_form.php");
+header("Location: ../index.php");
 exit;
 ?>
