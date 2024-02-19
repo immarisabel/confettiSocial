@@ -10,7 +10,7 @@ an experiment with activity pub and php
 ### MINIMAL REQUIREMENTS:
 
 - [x] php form and database connection
-- [ ] HTML support
+- [x] HTML support
 - [ ] activity pub implementation to read the message
 - [ ] activity pub implementation to like the message
 - [ ] activity pub implementation to follow other users
@@ -23,5 +23,17 @@ an experiment with activity pub and php
   
 ### TO TEST:
 
-Make sure you update `db_connection.php` with your own database information.
-Also use `tables.sql` file for the tables.
+- Make sure you update `db_connection.php` with your own database information.
+- Also use `tables.sql` file for the tables.
+
+- Feel free to customize the theme by just changing the root colors under `/assets/css/estilo.css`:
+```css
+:root {
+    --dark: #222222;
+    --light: #ffffff;
+    --primary: #ff018d;
+    --secondary: #ed65ff;
+    --body-fonts: "Lora", serif;
+    --header-fonts: "Lora", serif;
+...
+```
